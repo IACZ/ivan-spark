@@ -18,3 +18,5 @@ r4 = r3.map(lambda tokens: (int(tokens[1]), float(tokens[-1])))
 r5 = r4.reduceByKey(lambda temp1, temp2: max(temp1, temp2))
 
 r5.saveAsTextFile('/home/mehul/Desktop/max-temp-yearly-spark')
+
+sc.stop()
